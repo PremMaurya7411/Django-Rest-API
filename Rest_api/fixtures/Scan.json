@@ -1,0 +1,74 @@
+[
+{
+    "model": "api.scan",
+    "pk": 1,
+    "fields": {
+        "scan_id": "a0c67e58-8024-49f9-bc72-11b200205280",
+        "targets": 1,
+        "scan_engines": "Mobile",
+        "scan_schedule": "Weekly",
+        "start_time": "2024-05-10T11:00:36.007Z",
+        "is_deleted": false
+    }
+},
+{
+    "model": "api.scan",
+    "pk": 2,
+    "fields": {
+        "scan_id": "a54cb387-483c-4a20-9423-9ee7f674b088",
+        "targets": 1,
+        "scan_engines": "Cloud",
+        "scan_schedule": "One time",
+        "start_time": "2024-05-10T11:01:56.041Z",
+        "is_deleted": false
+    }
+},
+{
+    "model": "api.scan",
+    "pk": 3,
+    "fields": {
+        "scan_id": "cc583bf4-71f2-4467-bcca-168de8522948",
+        "targets": 1,
+        "scan_engines": "Infra",
+        "scan_schedule": "Daily",
+        "start_time": "2024-05-10T11:02:27.465Z",
+        "is_deleted": false
+    }
+},
+{
+    "model": "api.scan",
+    "pk": 4,
+    "fields": {
+        "scan_id": "307b7e1a-279a-4bb6-b2d8-50c53a741ec5",
+        "targets": 1,
+        "scan_engines": "Website",
+        "scan_schedule": "Weekly",
+        "start_time": "2024-05-10T11:03:02.407Z",
+        "is_deleted": false
+    }
+},
+{
+    "model": "api.scan",
+    "pk": 5,
+    "fields": {
+        "scan_id": "cb911c7b-b07a-45d4-94e6-0ea7c0bf9141",
+        "targets": 1,
+        "scan_engines": "Webapp",
+        "scan_schedule": "Monthly",
+        "start_time": "2024-05-10T11:03:53.683Z",
+        "is_deleted": false
+    }
+},
+{
+    "model": "api.scan",
+    "pk": 6,
+    "fields": {
+        "scan_id": "def896cc-efc4-4fcd-88d8-1c7a3eda53c3",
+        "targets": 1,
+        "scan_engines": "API",
+        "scan_schedule": "Custom",
+        "start_time": "2024-05-10T11:04:16.164Z",
+        "is_deleted": false
+    }
+}
+]

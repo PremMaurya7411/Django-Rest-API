@@ -1,0 +1,1954 @@
+{
+	"info": {
+		"_postman_id": "41fd277e-99c9-4d5c-b530-6a38c1e82580",
+		"name": "Python Projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25041522",
+		"_collection_link": "https://xczx22.postman.co/workspace/xczx-Workspace~b607935e-ce1a-4c2f-8ba0-f9236404278a/collection/25041522-41fd277e-99c9-4d5c-b530-6a38c1e82580?action=share&source=collection_link&creator=25041522"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zxcx@gmail.com\",\n    \"password\": \"BHeemnegu@\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register",
+								""
+							]
+						},
+						"description": "The Auth Register API allows users to create a new account by registering with their email and password. Upon successful registration, the user will receive access credentials for authentication and access to the application's features."
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"bheemexoticait@gmail.com\",\n    \"password\": \"BHeemnegu@\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login",
+								""
+							]
+						},
+						"description": "The Auth Login API allows users to authenticate themselves by providing their email and password. Upon successful authentication, the user will receive a JWT (JSON Web Token) that can be used to access protected resources within the application."
+					},
+					"response": []
+				},
+				{
+					"name": "Verify OTP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": \"717150\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/verify-otp/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-otp",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log Out API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY5MzYzMDA1LCJpYXQiOjE3MTU3NjMwMDUsImp0aSI6ImI4MjY0YTEwYmM1ZDQyMDdiYmUzMWUwMjI5YTk0MTQ5IiwidXNlcl9pZCI6MX0.DQmsj3mAsGHat2WSroX6dtQKF2XKS1CYuDcMSFkbwXo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/logout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout",
+								""
+							]
+						},
+						"description": "The Auth Logout API allows authenticated users to log out of the system by invalidating their current session token. This API endpoint ensures that the user's access token is no longer valid, thus preventing further access to protected resources until the user logs in again."
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rohitash.engg@gmail.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/forgot-password/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password",
+								""
+							]
+						},
+						"description": "StartFragment\n\nThe Forgot Password API allows users to request a password reset email if they have forgotten their password. Upon receiving the request, the system will generate a unique token and send an email with instructions to reset the password. This API provides a secure way for users to regain access to their accounts in case they forget their passwords.\n\n  \nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"rohitash.engg@gmail.com\",\n    \"new_password\":\"rakeshexoticait@123\",\n    \"confirm_password\":\"rakeshexoticait@123\",\n    \"otp\":\"867968\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/reset-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token  API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNDAyODM5NCwiaWF0IjoxNzEzOTQxOTk0LCJqdGkiOiIwZmEyYTBhODJjNzU0ZmRhOGVkYTA4MTM1YzZiZjczOSIsInVzZXJfaWQiOjF9.mPOjXUOZpmX5Y3DllUVfjRyjulqAZzDHiq2LDuQFOzQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNTMyNjkwNSwiaWF0IjoxNzE1MjQwNTA1LCJqdGkiOiI5N2RjNjEwNDgyMDc0YzkyOTU0MmE5NWY2ZDI3ZjE0YSIsInVzZXJfaWQiOjJ9.1IgGE3OROllNPIKZ7cWlCdtTkmicsUSfZvMMRPJZNQk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4OTMyODgwLCJpYXQiOjE3MTUzMzI4ODAsImp0aSI6ImVlNzM3OWViZGI1NzRiNDA4NTg0YzhlNGFhZGMyODI4IiwidXNlcl9pZCI6MX0.6E2DPoFRgaUFPKYXrs1840xFy1xeurRv821GSSwvgGM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Rohitash\",\n    \"email\":\"rohitash.engg@gmail.com\",\n    \"tenant\":2\n}\n"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User API All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4OTE5MjkxLCJpYXQiOjE3MTUzMTkyOTEsImp0aSI6IjhlNWY2MzRlMWI0ZDQ0Y2I4YmNiZjg3Nzc4MjU1MTZjIiwidXNlcl9pZCI6NH0.F2tutAX-WAoANdeKHdhLcBJyOl8DmL81vZrnw7DwPbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "premMaury",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "premMaury@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tenant",
+									"value": "premMaury@gmail.com_tenant",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User API By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NzU4OTI0LCJpYXQiOjE3MTUxNTM1MzQsImp0aSI6IjJhMDgxYmRkM2ZiZjRjZTNhNTMyZGFlNTY4NTYwZjQ1IiwidXNlcl9pZCI6Mn0.K92hBiSzMTxSRbu8vmLZCnN5EaqodjBoV6kKzwQvkEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "premMaury",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "premMaury@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tenant",
+									"value": "premMaury@gmail.com_tenant",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch To Modify User API By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NzU4OTI0LCJpYXQiOjE3MTUxNTM1MzQsImp0aSI6IjJhMDgxYmRkM2ZiZjRjZTNhNTMyZGFlNTY4NTYwZjQ1IiwidXNlcl9pZCI6Mn0.K92hBiSzMTxSRbu8vmLZCnN5EaqodjBoV6kKzwQvkEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Rohitash\",\n    \"email\":\"rohitash.engg@gmail.com\",\n    \"tenant\":2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NzU4OTI0LCJpYXQiOjE3MTUxNTM1MzQsImp0aSI6IjJhMDgxYmRkM2ZiZjRjZTNhNTMyZGFlNTY4NTYwZjQ1IiwidXNlcl9pZCI6Mn0.K92hBiSzMTxSRbu8vmLZCnN5EaqodjBoV6kKzwQvkEY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "ARVerma@123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "premMaury@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tenant",
+									"value": "premMaury@gmail.com_tenant",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/users/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Create Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"admin23327887\",\r\n   \"permission\": [\r\n        \"Can add nt\"\r\n    ]\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/role/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Roles By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/role/1/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/role/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role By ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"zvcvxbxcvcxvcx\",\r\n   \"permission_names\": [\r\n        \"kOMAL\"\r\n        \r\n    ]\r\n\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/role/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/role/2/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tenant",
+			"item": [
+				{
+					"name": "Create Tenant API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sarah Patel\",\r\n    \"organization_name\": \"TechBridge Foundation\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/tenants/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tenants",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Tendent By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/tenants/5f9e2ede-6e10-498f-9b26-9ed258d9ff45/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tenants",
+								"5f9e2ede-6e10-498f-9b26-9ed258d9ff45",
+								""
+							],
+							"query": [
+								{
+									"key": "UUID",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch All tenants ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/tenants/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tenants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch the Tenant API",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bheem Singhzxcxzcxz\",\r\n    \"organization_name\": \"exotica it solutions LTD\",\r\n    \"is_active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/tenants/5f9e2ede-6e10-498f-9b26-9ed258d9ff45/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tenants",
+								"5f9e2ede-6e10-498f-9b26-9ed258d9ff45",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete the Tenant API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/tenants/160096b9-d9da-40e4-9ec4-f03944cb12cc/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"tenants",
+								"160096b9-d9da-40e4-9ec4-f03944cb12cc",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Target",
+			"item": [
+				{
+					"name": "Create Target",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sophia Nguyen\",\r\n    \"labels\": \"Customer\",\r\n    \"tags\": \"Regular\",\r\n    \"target_notes\": \"Sophia has been a loyal customer for over two years, regularly purchasing our products.\",\r\n    \"type\": \"Mobile\",\r\n    \"key1\": \"Username\",\r\n    \"key2\": \"Order History\",\r\n    \"field1\": \"sophia_n\",\r\n    \"field2\": \"Frequent purchases\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/targets/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"targets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve all Targets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Target\",\r\n    \"labels\": \"Example Label\",\r\n    \"tags\": \"Example Tag\",\r\n    \"target_notes\": \"Example Notes\",\r\n    \"type\": \"Website\",\r\n    \"key1\": \"hjgsdfdfbhj\",\r\n    \"key2\": \"mknb xjhsdbuhvh\",\r\n    \"field1\": \"Example Field 1\",\r\n    \"field2\": \"Example Field 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/targets/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"targets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Target by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Target\",\r\n    \"labels\": \"Example Label\",\r\n    \"tags\": \"Example Tag\",\r\n    \"target_notes\": \"Example Notes\",\r\n    \"type\": \"Website\",\r\n    \"key1\": \"hjgsdfdfbhj\",\r\n    \"key2\": \"mknb xjhsdbuhvh\",\r\n    \"field1\": \"Example Field 1\",\r\n    \"field2\": \"Example Field 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/targets/8/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"targets",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Target",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Target lkkliooioi\",\r\n    \"labels\": \"Example Label\",\r\n    \"tags\": \"Example Tag\",\r\n    \"target_notes\": \"Example Notes\",\r\n    \"type\": \"Website\",\r\n    \"key1\": \"hjgsdfdfbhj\",\r\n    \"key2\": \"mknb xjhsdbuhvh\",\r\n    \"field1\": \"Example Field 1\",\r\n    \"field2\": \"Example Field 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/targets/8/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"targets",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Target",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Example Target\",\r\n    \"labels\": \"Example Label\",\r\n    \"tags\": \"Example Tag\",\r\n    \"target_notes\": \"Example Notes\",\r\n    \"type\": \"Website\",\r\n    \"key1\": \"hjgsdfdfbhj\",\r\n    \"key2\": \"mknb xjhsdbuhvh\",\r\n    \"field1\": \"Example Field 1\",\r\n    \"field2\": \"Example Field 2\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/targets/8/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"targets",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "Create project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Education Data Analytics Solution\",\r\n    \"description\": \"Our solution caters to the unique data analysis needs of educational institutions. From tracking student performance to optimizing curriculum design, our platform helps educators make data-driven decisions that enhance learning outcomes and improve educational quality.\",\r\n    \"targets\": [2, 6, 5]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve projects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "python rest api",
+								"type": "text"
+							},
+							{
+								"key": "description",
+								"value": "created by python rest api with django",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reterive project by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/3/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit project by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DataForge\",\r\n    \"description\": \"DataForge is a cutting-edge data analytics platform engineered to streamline data processing and analysis.\",\r\n    \"targets\": [3,2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/3/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/3/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Risk by Project ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/1/risks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"risks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Export Vulnerabilities by Project ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project Name\",\r\n    \"description\": \"Project Description\",\r\n    \"targets\": [\r\n        {\r\n            \"target_name\": \"Target 1\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Web\\\", \\\"target_url\\\": \\\"http://example.com\\\"}\"\r\n        },\r\n        {\r\n            \"target_name\": \"Target 2\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Mobile\\\", \\\"target_platform\\\": \\\"iOS\\\"}\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/1/export/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"export",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Project Report by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project Name\",\r\n    \"description\": \"Project Description\",\r\n    \"targets\": [\r\n        {\r\n            \"target_name\": \"Target 1\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Web\\\", \\\"target_url\\\": \\\"http://example.com\\\"}\"\r\n        },\r\n        {\r\n            \"target_name\": \"Target 2\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Mobile\\\", \\\"target_platform\\\": \\\"iOS\\\"}\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/1/download-project-report/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"download-project-report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retest Project BY ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project Name\",\r\n    \"description\": \"Project Description\",\r\n    \"targets\": [\r\n        {\r\n            \"target_name\": \"Target 1\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Web\\\", \\\"target_url\\\": \\\"http://example.com\\\"}\"\r\n        },\r\n        {\r\n            \"target_name\": \"Target 2\",\r\n            \"target_description\": \"{\\\"target_type\\\": \\\"Mobile\\\", \\\"target_platform\\\": \\\"iOS\\\"}\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/projects/1/retest/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"1",
+								"retest",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permission API",
+			"item": [
+				{
+					"name": "Create Permission",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "Can add blog post",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "meda",
+								"value": "blog_post",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Create Test User1",
+									"type": "text"
+								},
+								{
+									"key": "codename",
+									"value": "python1q11111111111",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "usercustom",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/permission/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permission",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View  Permission",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NjY3Njg2LCJpYXQiOjE3MTUwNjc2ODYsImp0aSI6ImUzOTkxODQxYWNiMTQxZjVhMGVlYTBmZDQxOGY4NTE2IiwidXNlcl9pZCI6Mn0.b3Y4KS7n53BcatF8BpH5vcgDcNLIieI1vvM3kUckE-g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Can add blog post",
+								"type": "text"
+							},
+							{
+								"key": "content_type_name",
+								"value": "blog_post",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/permission/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View  Permission By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NjY3Njg2LCJpYXQiOjE3MTUwNjc2ODYsImp0aSI6ImUzOTkxODQxYWNiMTQxZjVhMGVlYTBmZDQxOGY4NTE2IiwidXNlcl9pZCI6Mn0.b3Y4KS7n53BcatF8BpH5vcgDcNLIieI1vvM3kUckE-g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "name",
+								"value": "Can add blog post",
+								"type": "text"
+							},
+							{
+								"key": "content_type_name",
+								"value": "blog_post",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/permission/6/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permission",
+								"6",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NjY3Njg2LCJpYXQiOjE3MTUwNjc2ODYsImp0aSI6ImUzOTkxODQxYWNiMTQxZjVhMGVlYTBmZDQxOGY4NTE2IiwidXNlcl9pZCI6Mn0.b3Y4KS7n53BcatF8BpH5vcgDcNLIieI1vvM3kUckE-g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "name",
+								"value": "Can add blog post"
+							},
+							{
+								"key": "content_type_name",
+								"value": "blog_post"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Create Test User1",
+									"type": "text"
+								},
+								{
+									"key": "codename",
+									"value": "python",
+									"type": "text"
+								},
+								{
+									"key": "model",
+									"value": "usercustomadas",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/permission/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permission",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Permission By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY4NjY3Njg2LCJpYXQiOjE3MTUwNjc2ODYsImp0aSI6ImUzOTkxODQxYWNiMTQxZjVhMGVlYTBmZDQxOGY4NTE2IiwidXNlcl9pZCI6Mn0.b3Y4KS7n53BcatF8BpH5vcgDcNLIieI1vvM3kUckE-g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/permission/1000/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"permission",
+								"1000",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scan",
+			"item": [
+				{
+					"name": "Create Scan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"scan_engines\": \"API\",\r\n    \"scan_schedule\": \"Custom\",\r\n    \"targets\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch the Scan List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scan By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download scan pdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/5/download-project-report/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								"5",
+								"download-project-report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download scan csv",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/scans/2/download-output-csv/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scans",
+								"2",
+								"download-output-csv",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Risk",
+			"item": [
+				{
+					"name": "Create Risk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Severe Network Outage Affecting Production Environment\",\r\n    \"description\": \"A severe network outage has occurred, impacting the production environment and causing downtime for critical services.\",\r\n    \"incoming_severity\": \"High\",\r\n    \"remediation\": \"Engage network engineers to identify and address the root cause of the network outage and restore service functionality.\",\r\n    \"references\": \"Network Incident Response Plan, SLA Agreement\",\r\n    \"poc\": \"The network outage was detected through monitoring systems indicating a loss of connectivity to production servers.\",\r\n    \"compliances\": \"ISO 27001, SOC 2\",\r\n    \"last_detected\": \"2024-05-11T11:30:00Z\",\r\n    \"user_modified_severity\": \"False\",\r\n    \"ums_datetime\": \"2024-05-11T12:00:00Z\",\r\n    \"ums_notes\": \"Severity confirmed after assessing the impact on production services.\",\r\n    \"rt_enum\": \"Resolution\",\r\n    \"rt_notes\": \"Network engineers working to identify and resolve the root cause of the outage and restore service functionality.\",\r\n    \"rt_datetime\": \"2024-05-11T13:00:00Z\",\r\n    \"scan\": 1,\r\n    \"project\": 1,\r\n    \"rt_user\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/risks/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"risks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reterive Risk list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/risks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"risks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reterive Risk by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/risks/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"risks",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Risk by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Severe Network Outage Affecting Production Environment\",\r\n    \"description\": \"A severe network outage has occurred, impacting the production environment and causing downtime for critical services.\",\r\n    \"incoming_severity\": \"High\",\r\n    \"remediation\": \"Engage network engineers to identify and address the root cause of the network outage and restore service functionality.\",\r\n    \"references\": \"Network Incident Response Plan, SLA Agreement\",\r\n    \"poc\": \"The network outage was detected through monitoring systems indicating a loss of connectivity to production servers.\",\r\n    \"compliances\": \"ISO 27001, SOC 2\",\r\n    \"last_detected\": \"2024-05-11T11:30:00Z\",\r\n    \"user_modified_severity\": \"False\",\r\n    \"ums_datetime\": \"2024-05-11T12:00:00Z\",\r\n    \"ums_notes\": \"Severity confirmed after assessing the impact on production services.\",\r\n    \"rt_enum\": \"Resolution\",\r\n    \"rt_notes\": \"Network engineers working to identify and resolve the root cause of the outage and restore service functionality.\",\r\n    \"rt_datetime\": \"2024-05-11T13:00:00Z\",\r\n    \"scan\": 9,\r\n    \"project\": 7,\r\n    \"rt_user\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/risks/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"risks",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Risk by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/risks/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"risks",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Change Password",
+			"item": [
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjo0ODY5MTkwNDkyLCJpYXQiOjE3MTU1OTA0OTIsImp0aSI6IjBhMmU2ZjIxOGVmZjQxYjY4ZjUwOGYxZTY5Y2NmOGZjIiwidXNlcl9pZCI6MX0.dppbNCASwxc_gPNQo1kVAcnc9AszVYh8OTR9n_iXWgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\":\"rakeshexoticait\",\r\n    \"new_password\":\"1234test@1234#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/change-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}

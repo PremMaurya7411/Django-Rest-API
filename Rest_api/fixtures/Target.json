@@ -1,0 +1,104 @@
+[
+{
+    "model": "api.target",
+    "pk": 1,
+    "fields": {
+        "name": "Sophia Nguyen",
+        "labels": "Customer",
+        "tags": "Regular",
+        "target_notes": "Sophia has been a loyal customer for over two years, regularly purchasing our products.",
+        "type": "API",
+        "key1": "Username",
+        "key2": "Order History",
+        "field1": "sophia_n",
+        "field2": "Frequent purchases",
+        "deleted": false,
+        "deleted_at": null
+    }
+},
+{
+    "model": "api.target",
+    "pk": 2,
+    "fields": {
+        "name": "Alice Johnson",
+        "labels": "Customer",
+        "tags": "Regular",
+        "target_notes": "Alice is a loyal customer who frequently recommends our services to friends.",
+        "type": "Cloud",
+        "key1": "Username",
+        "key2": "Phone Number",
+        "field1": "alice_j",
+        "field2": "+1 (555) 987-6543",
+        "deleted": false,
+        "deleted_at": null
+    }
+},
+{
+    "model": "api.target",
+    "pk": 3,
+    "fields": {
+        "name": "Michael Smith",
+        "labels": "Partner, VIP",
+        "tags": "Website",
+        "target_notes": "Michael is a strategic partner with whom we collaborate on key projects.",
+        "type": "Website",
+        "key1": "Email",
+        "key2": "Company",
+        "field1": "michael.smith@example.com",
+        "field2": "ABC Solutions Inc.",
+        "deleted": false,
+        "deleted_at": null
+    }
+},
+{
+    "model": "api.target",
+    "pk": 4,
+    "fields": {
+        "name": "Emily Brown",
+        "labels": "Customer",
+        "tags": "Regular",
+        "target_notes": "Emily is a new customer who recently signed up for our newsletter.",
+        "type": "Webapp",
+        "key1": "Username",
+        "key2": "Followers",
+        "field1": "emily_b",
+        "field2": "3200",
+        "deleted": false,
+        "deleted_at": null
+    }
+},
+{
+    "model": "api.target",
+    "pk": 5,
+    "fields": {
+        "name": "David Wilson",
+        "labels": "Prospect",
+        "tags": "Medium Priority",
+        "target_notes": "David attended our recent webinar on digital marketing.",
+        "type": "API",
+        "key1": "Email",
+        "key2": "Company",
+        "field1": "david.w@example.com",
+        "field2": "XYZ Corporation",
+        "deleted": false,
+        "deleted_at": null
+    }
+},
+{
+    "model": "api.target",
+    "pk": 6,
+    "fields": {
+        "name": "Sophia Nguyen",
+        "labels": "Customer",
+        "tags": "Regular",
+        "target_notes": "Sophia has been a loyal customer for over two years, regularly purchasing our products.",
+        "type": "Mobile",
+        "key1": "Username",
+        "key2": "Order History",
+        "field1": "sophia_n",
+        "field2": "Frequent purchases",
+        "deleted": false,
+        "deleted_at": null
+    }
+}
+]

@@ -1,0 +1,62 @@
+[
+{
+    "model": "api.tenant_user",
+    "pk": 1,
+    "fields": {
+        "tenant_id": "bcdf6d8b-9345-451c-8bb2-5d244152df0e",
+        "name": "Sarah Patel",
+        "organization_name": "TechBridge Foundation",
+        "is_active": false
+    }
+},
+{
+    "model": "api.tenant_user",
+    "pk": 2,
+    "fields": {
+        "tenant_id": "ffc37184-46a7-4a6a-b9de-77ccb589a04e",
+        "name": "John Doe",
+        "organization_name": "XYZ Consulting Firm",
+        "is_active": false
+    }
+},
+{
+    "model": "api.tenant_user",
+    "pk": 3,
+    "fields": {
+        "tenant_id": "64b84f1c-8d83-4994-9c7e-a52f38664c71",
+        "name": "Marcus Johnson",
+        "organization_name": "HealthFit Solutions",
+        "is_active": false
+    }
+},
+{
+    "model": "api.tenant_user",
+    "pk": 4,
+    "fields": {
+        "tenant_id": "13731fd4-63d7-42fd-8a8f-3e820dda82b1",
+        "name": "John Doe",
+        "organization_name": "XYZ Consulting Firm",
+        "is_active": false
+    }
+},
+{
+    "model": "api.tenant_user",
+    "pk": 5,
+    "fields": {
+        "tenant_id": "ebc62c2e-de56-433f-a7e5-61bdebaae827",
+        "name": "Emily Smith",
+        "organization_name": "GreenTech Innovations",
+        "is_active": false
+    }
+},
+{
+    "model": "api.tenant_user",
+    "pk": 6,
+    "fields": {
+        "tenant_id": "5f9e2ede-6e10-498f-9b26-9ed258d9ff45",
+        "name": "Bheem Singhzxcxzcxz",
+        "organization_name": "exotica it solutions LTD",
+        "is_active": true
+    }
+}
+]

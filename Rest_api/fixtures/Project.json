@@ -1,0 +1,91 @@
+[
+{
+    "model": "api.project",
+    "pk": 1,
+    "fields": {
+        "name": "Retail Analytics Dashboard",
+        "description": "Our dashboard provides real-time insights into retail performance metrics, such as sales trends, inventory levels, and customer demographics.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            3,
+            6
+        ]
+    }
+},
+{
+    "model": "api.project",
+    "pk": 2,
+    "fields": {
+        "name": "E-commerce Analytics Platform",
+        "description": "Our platform is designed to provide comprehensive analytics solutions tailored specifically for e-commerce businesses. From tracking sales performance to analyzing customer behavior, our tools empower e-commerce companies to make data-driven decisions and maximize their online presence.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            2,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "api.project",
+    "pk": 3,
+    "fields": {
+        "name": "Healthcare Data Management System",
+        "description": "Our system is built to handle the complex data needs of healthcare organizations. With features for securely storing patient records, analyzing medical data, and tracking treatment outcomes, our platform enables healthcare providers to deliver better patient care and improve operational efficiency.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            1,
+            3,
+            6
+        ]
+    }
+},
+{
+    "model": "api.project",
+    "pk": 4,
+    "fields": {
+        "name": "Financial Data Analytics Suite",
+        "description": "Our suite offers powerful tools for financial institutions to analyze market trends, manage risks, and optimize investment strategies. With advanced algorithms and real-time data processing capabilities, our platform helps financial professionals stay ahead of the curve and make informed decisions.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            2,
+            4,
+            6
+        ]
+    }
+},
+{
+    "model": "api.project",
+    "pk": 5,
+    "fields": {
+        "name": "Supply Chain Optimization Platform",
+        "description": "Our platform leverages data analytics to streamline supply chain operations and enhance efficiency. By integrating data from suppliers, manufacturers, and distributors, our tools enable organizations to reduce costs, minimize risks, and improve overall supply chain performance.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            1,
+            3,
+            5
+        ]
+    }
+},
+{
+    "model": "api.project",
+    "pk": 6,
+    "fields": {
+        "name": "Education Data Analytics Solution",
+        "description": "Our solution caters to the unique data analysis needs of educational institutions. From tracking student performance to optimizing curriculum design, our platform helps educators make data-driven decisions that enhance learning outcomes and improve educational quality.",
+        "retest": false,
+        "is_deleted": false,
+        "targets": [
+            2,
+            5,
+            6
+        ]
+    }
+}
+]
